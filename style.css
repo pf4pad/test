@@ -4,7 +4,7 @@
 --gold: #bdae82;
 --regular: 'Inter', sans-serif;
 --bold: 'Merriweather', serif;
---pt: 100px;
+--pt: 98px;
 }
 *{
     margin: 0;
@@ -245,8 +245,13 @@ transition: 0.3s
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 24px;
+
 }
+.portfolio-item{
+   max-width: 450px;
+}
+
 .portfolio-img{
   width: 100%;
   object-fit: cover;
@@ -276,9 +281,14 @@ transition: 0.3s
 .btn-video:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
+.price-items{
+  display: flex;
+  gap: 25px;
+}
+
 .price-item{
   text-align: center;
-  padding: 43px 115px;
+  padding: 40px 112px;
   border: 2px solid var(--gold);
 }
 .price-title{
@@ -288,9 +298,11 @@ transition: 0.3s
   margin-bottom: 20px;
 }
 .price-value{
+  font-style: var(--bold);
   font-size: 24px;
   line-height: 48px;
   margin-bottom: 20px;
+  color: var(--gold);
 }
 
 .price-features{
@@ -317,7 +329,7 @@ transition: 0.3s
 .contacts-title{
   font-family: var(--bold);
   font-size: 40px;
-  line-height: 80px;
+    line-height: 80px;
   color: var(--gold);
   margin-bottom: 40px;
 }
