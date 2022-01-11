@@ -301,7 +301,7 @@ transition: 0.3s
   margin-bottom: 20px;
 }
 .price-value{
-  font-style: var(--bold);
+  font-family: var(--bold);
   font-size: 24px;
   line-height: 48px;
   margin-bottom: 20px;
