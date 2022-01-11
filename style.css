@@ -114,7 +114,7 @@ section:not(:first-child) {
   align-items: center;
   font-size: 20px;
   line-height: 50px;
-  gap: 30px;
+  gap: 32px;
 }
 .toggle-lang{
   display: flex;
@@ -136,7 +136,7 @@ section:not(:first-child) {
 }
 .hero-inner{
   padding: 160px 0 330px 60px;
-  max-width:500px;
+  max-width:560px;
 }
 .hero-title {
   font-family: var(--bold);
