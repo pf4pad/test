@@ -280,8 +280,8 @@ transition: 0.3s
 }
 .price-value{
   font-size: 24px;
-line-height: 48px;
-margin-bottom: 20px;
+  line-height: 48px;
+  margin-bottom: 20px;
 }
 
 .price-features{
