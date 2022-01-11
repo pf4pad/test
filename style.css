@@ -72,7 +72,7 @@ img{
 color: var(--white);
 transition: 0.3s
 }
-section:not(:first-child) .container {
+section:not(:first-child) {
   padding-top: var(--pt);
 }
 .container{
