@@ -205,9 +205,6 @@ section:not(:first-child) {
 line-height: 36px;
 }
 
-section:not(:first-child) .container {
-  padding-top: var(--pt);
-}
 .tabs{
   display: flex;
   justify-content: center;
