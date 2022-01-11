@@ -106,7 +106,7 @@ section:not(:first-child) {
 }
 .nav{
   margin-left: auto;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 .nav-list{
@@ -116,7 +116,17 @@ section:not(:first-child) {
   line-height: 50px;
   gap: 30px;
 }
+.toggle-lang{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
+}
+.link-lang{
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: 700; 
+}
 .section-hero .container {
   background-image: url('./assets/img/header-bg.png');
   background-position: center -90px;
