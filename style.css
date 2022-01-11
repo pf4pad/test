@@ -136,7 +136,7 @@ section:not(:first-child) {
 }
 .hero-inner{
   padding: 160px 0 330px 60px;
-  max-width:560px;
+  max-width:530px;
 }
 .hero-title {
   font-family: var(--bold);
@@ -235,7 +235,10 @@ line-height: 36px;
   font-family: inherit;
   color: var(--gold);
 }
-
+.tab-button.active{
+  color: var(--bg-dark);
+  background-color: var(--gold);
+}
 .tab-button:hover{
 color: var(--bg-dark);
 background-color: var(--gold);;
@@ -323,20 +326,20 @@ transition: 0.3s
   display: flex;
   flex-direction: column;
   max-width: 450px;
-  padding: 60px 0 195px;
+  padding: 65px 0 195px;
   margin-left: auto;
 }
 .contacts-title{
   font-family: var(--bold);
   font-size: 40px;
-    line-height: 80px;
+  line-height: 80px;
   color: var(--gold);
   margin-bottom: 40px;
 }
 .input{
   background: transparent;
   border: 2px solid var(--gold);
-  padding: 5px 0 5px 20px;
+  padding: 4px 0 2px 18px;
   margin-bottom: 20px; 
   line-height: 40px;
 }
@@ -350,7 +353,7 @@ textarea{
   background: transparent;
   border: 2px solid var(--gold);
   margin-bottom: 30px;
-  padding-top: 5px;
+  padding-top: 2px;
   padding-left: 20px;
   font-family: inherit;
   line-height: 40px;
@@ -376,11 +379,11 @@ textarea{
 .social-items{
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 21px;
 }
 .social-item{
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -388,8 +391,8 @@ textarea{
 }
 .social-link{
   display: block;
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
 }
 
 .social-item:hover {
