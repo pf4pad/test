@@ -18,15 +18,22 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
   color: var(--white);
   background-color: var(--bg-dark);
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-}
+  
+ }
+ .wrapper{
+   display: flex;
+justify-content: space-between;
+flex-direction: column;
+flex-direction: column;
+min-height: 100vh;;
+position: relative;
+overflow-x: hidden;
+ }
+ 
 a {
   text-decoration: none;
   color: inherit;
