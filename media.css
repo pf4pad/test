@@ -20,7 +20,7 @@
   }
   
   .header-container {
-  background: url('./assets/img/header-bg768.png');
+  background: url('./assets/img/header-bg768.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
   padding: 20px 60px;
@@ -139,7 +139,7 @@
   
 }
   .section-hero .container {
-  background-image: url('./assets/img/header-bg768.png');
+  background-image: url('./assets/img/header-bg768.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
   }
@@ -176,7 +176,7 @@
 }
 .video-player{
   height: 420px;
-  background-image: url('./assets/img/video-player768.png');
+  background-image: url('./assets/img/video-player768.jpg');
   background-position: center ;
   background-repeat: no-repeat;
 }
@@ -191,7 +191,7 @@
 }
 
 .section-contacts .container {
-  background-image: url('./assets/img/contacts768.png');
+  background-image: url('./assets/img/contacts768.jpg');
 
   background-size: auto 610px;
   background-position: center center;

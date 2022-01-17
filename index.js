@@ -5,6 +5,7 @@ console.log(`Вёрстка валидная +10
 Интерактивность, реализуемая через css + 20
 Итого 100`)
 
+
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.nav');
 
@@ -31,8 +32,8 @@ menu.addEventListener('click', (event) => {
 
 
 // Портфолио 3
+
 const portfolioBtns = document.querySelector('.tabs');
-const portfolioBtn = document.querySelector('.portfolio-btn');
 const portfolioImages = document.querySelectorAll('.portfolio-img');
 const portfolioBtnAll = document.querySelectorAll('.portfolio-btn');
 
@@ -52,14 +53,40 @@ portfolioBtns.addEventListener('click', changeImage)
 
 
 
-// //  Кэширование изображение
-// const seasons = ['winter', 'spring', 'summer', 'autumn'];
-// function preloadSummerImages() {
+//  Кэширование изображение
+const seasons = ['winter', 'spring', 'summer', 'autumn'];
 
-//   for (let i = 1; i <= 6; i++) {
-//     const img = new Image();
-//     img.src = `./assets/img/${seasons[i]}/${i}.jpg`;
-//     console / log(img)
-//   }
-// }
-// preloadSummerImages();
+
+seasons.forEach((season) => {
+  for (let i = 1; i <= 6; i++) {
+    const img = new Image();
+    img.src = `./assets/img/${season}/${i}.jpg`;
+    console.log(img.src)
+  }
+})
+
+
+import i18Obj from './translate.js';
+
+
+const languages = document.querySelectorAll('toggle-lang')
+const languagRu = document.querySelectorAll('toggle-lang')
+const languagEn = document.querySelectorAll('toggle-lang')
+
+function getTranslate(event) {
+
+  if (event.target.classList.contains('link-lang')) {
+    let leng = event.target.dataset.leng
+
+
+    portfolioImages.forEach((img, index) => img.src = `./assets/img/${season}/${index + 1}.jpg`);
+    languages.forEach((a) => a.classList.remove('active'))
+    event.target.classList.add('active');
+  }
+
+}
+
+getTranslate(i18Obj)
+
+
+languages.addEventListener('click', changeImage)

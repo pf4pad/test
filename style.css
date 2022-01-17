@@ -101,7 +101,7 @@ section:not(:first-child) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url('./assets/img/header-bg.png');
+  background: url('./assets/img/header-bg.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
   padding: 20px;
@@ -142,7 +142,7 @@ section:not(:first-child) {
 }
 
 
-.link-lang:first-child{
+.link-lang.active{
   color: var(--gold);
 }
 
@@ -150,7 +150,7 @@ section:not(:first-child) {
   display: none;
 }
 .section-hero .container {
-  background-image: url('./assets/img/header-bg.png');
+  background-image: url('./assets/img/header-bg.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
     
@@ -196,7 +196,7 @@ section:not(:first-child) {
 .skills-items,
 .price-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -351,13 +351,13 @@ transition: 0.3s
   justify-content: center;
   align-items: center;
   height: 705px;
-  /* background-image: url('./assets/img/video-player.png');
+  /* background-image: url('./assets/img/video-player.jpg');
   background-position: center ;
   background-repeat: no-repeat; */
 }
 
 .section-contacts .container{
-  background-image: url('./assets/img/contacts.png');
+  background-image: url('./assets/img/contacts.jpg');
   background-size: auto 700px;
   background-position: center center;
   background-repeat: no-repeat;
