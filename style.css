@@ -258,18 +258,23 @@ section:not(:first-child) {
   font-family: inherit;
   color: var(--gold);
 }
+
+.tab-button:hover{
+color: var(--white);
+background-color: transparent;
+transition: 0.3s
+}
 .tab-button.active{
   color: var(--bg-dark);
   background-color: var(--gold);
 }
-.tab-button:hover{
-color: var(--bg-dark);
-background-color: var(--gold);;
-transition: 0.3s
-}
+.tab-button.active:hover{
+  color: var(--white);
+}  
+
 .portfolio-items{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
 }
@@ -287,6 +292,7 @@ transition: 0.3s
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 705px;
 }
 .btn-video{
   position: absolute;
@@ -340,10 +346,14 @@ transition: 0.3s
 }
 
 .video-player{
-  height: 420px;
-  background-image: url('./assets/img/video-player.png');
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 705px;
+  /* background-image: url('./assets/img/video-player.png');
   background-position: center ;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .section-contacts .container{

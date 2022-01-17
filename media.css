@@ -5,11 +5,11 @@
    margin-right: auto;
   }
   
-.portfolio-items,
+/* .portfolio-items,
 .price-items{
   flex-direction: column;
-  align-items: center;
-}
+  justify-content:
+} */
 }
 
 @media (max-width: 768px) {
