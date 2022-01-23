@@ -16,16 +16,12 @@
     padding: 0 60px;
     
   }
-  
   .header-container {
   background: url('./assets/img/header-bg768.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
   padding: 20px 60px;
-  
   }
-   
-  
   .nav {
     position: absolute;
     right: -620px;
@@ -112,7 +108,6 @@
   .burger--active .burger__line {
     transform: scale(0);
     transition: transform 0.3s ease-in-out;
-    
   }
  
   .hero-inner{
@@ -136,18 +131,17 @@
   
 }
   .section-hero .container {
+  
   background-image: url('./assets/img/header-bg768.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
   }
-
+  
+  
 .section-title{
   font-size: 32px;
   line-height: 80px;
- 
 }
-
-
 .title-container{
   width: 57%;
   margin-bottom: 50px;

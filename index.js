@@ -17,21 +17,12 @@ const menu = document.querySelector('.nav');
 burger.addEventListener('click', () => {
   burger.classList.toggle('burger--active');
   menu.classList.toggle('nav--active');
-
-  if (burger.classList.contains('burger--active')) {
-    header.body.style.opacity = '0.7';
-    nav.body.style.opacity = '0.7';
-
-  } else {
-    document.body.style.opacity = '1';
-  }
 })
 
 menu.addEventListener('click', (event) => {
   if (event.target.classList.contains('nav-link')) {
     burger.classList.remove('burger--active');
     menu.classList.remove('nav--active');
-    document.body.style.opacity = '1';
   }
 })
 
@@ -47,7 +38,6 @@ function changeImage(event) {
     let season = event.target.dataset.season
     portfolioImages.forEach((img, index) => img.src = `./assets/img/${season}/${index + 1}.jpg`);
     portfolioBtnAll.forEach((btn) => btn.classList.remove('active'))
-
     event.target.classList.add('active');
   }
 }
@@ -65,7 +55,6 @@ seasons.forEach((season) => {
   for (let i = 1; i <= 6; i++) {
     const img = new Image();
     img.src = `./assets/img/${season}/${i}.jpg`;
-    console.log(img.src)
   }
 })
 
@@ -73,24 +62,31 @@ seasons.forEach((season) => {
 import i18Obj from './translate.js';
 
 
-const languages = document.querySelectorAll('toggle-lang')
-const languagRu = document.querySelectorAll('toggle-lang')
-const languagEn = document.querySelectorAll('toggle-lang')
+const languages = document.querySelector('toggle-lang')
+const languagRu = document.dataset('en')
+const languagEn = document.dataset('ru')
 
 function getTranslate(event) {
 
   if (event.target.classList.contains('link-lang')) {
-    let leng = event.target.dataset.leng
+    // let lang = event.target.dataset.lang
 
 
-    portfolioImages.forEach((img, index) => img.src = `./assets/img/${season}/${index + 1}.jpg`);
-    languages.forEach((a) => a.classList.remove('active'))
-    event.target.classList.add('active');
+    languages.forEach((a) => a.classList.remove('lang-active'))
+    event.target.classList.add('lang-active');
+    console.log('true')
   }
 
 }
 
-getTranslate(i18Obj)
+// getTranslate(i18Obj)
 
 
-languages.addEventListener('click', changeImage)
+languages.addEventListener('click', getTranslate())
+
+// const body = document.getElementById('body');
+// const toggle = document.getElementById('toggle');
+// const moon = document.getElementById('moon');
+// const sunBody = document.getElementById('sun');
+
+

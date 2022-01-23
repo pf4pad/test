@@ -66,7 +66,6 @@ img{
 }
 
 .btn {
-  
   width: 220px;
   height: 55px;
   background-color: var(--gold);
@@ -76,11 +75,13 @@ img{
   font-size: var(--fontGl);
   line-height: 40px;
   font-family: inherit;
+  transition: 0.4s;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
 color: var(--white);
-transition: 0.3s
+transition: 0.43s;
+box-shadow: inset 15em 0 0 0 var(--bg-dark);
 }
 section:not(:first-child) {
   padding-top: var(--pt);
@@ -105,8 +106,7 @@ section:not(:first-child) {
   background-repeat: no-repeat;
   background-position: center 0;
   padding: 20px;
-}
-
+  }
 
 .logo {
   width: 50px;
@@ -138,14 +138,29 @@ section:not(:first-child) {
   font-weight: 700; 
   align-items: center;
   gap: 10px;
-  margin-right: 20px;
 }
 
 
 .link-lang.active{
   color: var(--gold);
 }
+.btn-theme {
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  background-image: url('./assets/svg/White-theme.svg');
+  background-size: contain;
+  background-repeat: no-repeat;  
+  transition: 0.3s;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  
+}
 
+.btn-theme:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
 .burger{
   display: none;
 }
@@ -153,9 +168,10 @@ section:not(:first-child) {
   background-image: url('./assets/img/header-bg.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
-    
-}
+ }
+
 .hero-inner{
+  position: relative;
   padding: 180px 0 330px 60px;
   max-width:530px;
 }
@@ -249,7 +265,7 @@ section:not(:first-child) {
 .tab-button{
   width: 220px;
   height: 55px;
-  background-color: transparent;
+  background-color: var(--bg-dark);
   outline: none;
   cursor: pointer;
   border: 1px solid var(--gold);
@@ -260,9 +276,10 @@ section:not(:first-child) {
 }
 
 .tab-button:hover{
-color: var(--white);
-background-color: transparent;
-transition: 0.3s
+  color: var(--white);
+  background-color: var(--bg-dark);
+  transition: 0.3s;
+  
 }
 .tab-button.active{
   color: var(--bg-dark);

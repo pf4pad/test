@@ -20,16 +20,13 @@
 <body>
   <div class="wrapper">
     <header class="header" id="header">
-
       <div class="container header-container">
-
         <a class="logo" href="#header">
         </a>
-
         <nav class="nav" id="#nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link" href="#skills" data-i18="skills">Skills</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -45,23 +42,23 @@
             </li>
           </ul>
         </nav>
-
         <div class="modile-container">
           <div class="toggle-lang">
-            <a href="#" class="link-lang" data-lang="en">en</a>
+            <a href="#" class="link-lang lang-active" data-lang="en">en</a>
             <span>/</span>
             <a href="#" class="link-lang" data-lang="ru">ru</a>
           </div>
+          <button class="btn-theme " href="#">
+          </button>
           <button class="burger">
             <span class="burger__line"></span>
           </button>
         </div>
-      </div>
 
+      </div>
     </header>
 
     <main class="main">
-
       <section class="section-hero" id="hero">
         <div class="container">
           <div class="hero-inner">
@@ -133,10 +130,10 @@
             </h2>
           </div>
           <div class="tabs">
-            <button class="tab-button portfolio-btn" data-season="winter">Winter</button>
-            <button class="tab-button portfolio-btn" data-season="spring">Spring</button>
-            <button class="tab-button portfolio-btn" data-season="summer">Summer</button>
-            <button class="tab-button portfolio-btn " data-season="autumn">Autumn</button>
+            <button class="tab-button portfolio-btn ripple" data-season="winter">Winter</button>
+            <button class="tab-button portfolio-btn ripple" data-season="spring">Spring</button>
+            <button class="tab-button portfolio-btn ripple" data-season="summer">Summer</button>
+            <button class="tab-button portfolio-btn active ripple" data-season="autumn">Autumn</button>
           </div>
           <div class="portfolio-items">
             <div class="portfolio-item">
