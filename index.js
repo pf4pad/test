@@ -66,27 +66,60 @@ seasons.forEach((season) => {
 })
 
 
+
+// Перевод
+
+
 import i18Obj from './translate.js';
 
 
-const languages = document.querySelectorAll('toggle-lang')
-const languagRu = document.querySelectorAll('toggle-lang')
-const languagEn = document.querySelectorAll('toggle-lang')
+const toggleLang = document.querySelector('.toggle-lang');
+const linkLang = document.querySelectorAll('.link-lang');
 
-function getTranslate(event) {
+
+function changeLang(event) {
 
   if (event.target.classList.contains('link-lang')) {
-    let leng = event.target.dataset.leng
 
+    linkLang.forEach(e => e.classList.remove('active'));
 
-    portfolioImages.forEach((img, index) => img.src = `./assets/img/${season}/${index + 1}.jpg`);
-    languages.forEach((a) => a.classList.remove('active'))
-    event.target.classList.add('active');
+    event.target.classList.add('active')
+    if (event.target.classList.contains('ru')) {
+      getTranslate('ru')
+    } else getTranslate('en')
   }
 
+};
+
+toggleLang.addEventListener('click', changeLang)
+
+function getTranslate(lang) {
+  const dataI18 = document.querySelectorAll('[data-i18]')
+  dataI18.forEach(item => item.textContent = i18Obj[lang][item.dataset.i18])
+  console.log(dataI18)
 }
 
-getTranslate(i18Obj)
 
+// Черная -светлая тема
 
-languages.addEventListener('click', changeImage)
+const block = ['body', '.container', '.skills-container', '.portfolio-container', '.video-container', '.price-container']
+
+const theme = document.querySelector('.theme')
+
+theme.addEventListener('click', function () {
+  block.forEach(el => document.querySelector(el).classList.toggle('light-theme'))
+  theme.classList.toggle('chang-theme')
+  const titleContainer = document.querySelectorAll('.title-container')
+  const sectionTitle = document.querySelectorAll('.section-title')
+  // const transparentBtn = document.querySelectorAll('.transparent-btn')
+  // transparentBtn.forEach(el => el.classList.add('light-theme'))
+  sectionTitle.forEach(el => el.classList.toggle('light-theme'))
+  titleContainer.forEach(el => el.classList.toggle('titleContainer-light'))
+
+  // if (window.matchMedia("(max-width: 768px)").matches) {
+  //   navList.style.backgroundColor = 'white';
+  // navList.style.color = 'black';
+
+  // } 
+
+})
