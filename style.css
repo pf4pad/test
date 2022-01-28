@@ -128,7 +128,9 @@ section:not(:first-child) {
   margin-left: auto;
   padding-right: 30px;
 }
-
+.nav-mobile{
+  display: none;
+}
 .nav-list{
   display: flex;
   align-items: center;
@@ -136,6 +138,8 @@ section:not(:first-child) {
   line-height: 50px;
   gap: 32px;
 }
+
+
 .toggle-lang{
   display: flex;
   font-size: var(--fontGl);

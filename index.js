@@ -7,26 +7,19 @@ console.log(`Вёрстка валидная +10
 
 
 const burger = document.querySelector('.burger');
-const menu = document.querySelector('.nav');
+const menu = document.querySelector('.nav-mobile');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('burger--active');
-  menu.classList.toggle('nav--active');
+  menu.classList.toggle('nav-mobile--active');
 
-  if (burger.classList.contains('burger--active')) {
-    header.body.style.opacity = '0.7';
-    nav.body.style.opacity = '0.7';
-
-  } else {
-    document.body.style.opacity = '1';
-  }
 })
 
 menu.addEventListener('click', (event) => {
-  if (event.target.classList.contains('nav-link')) {
+  if (event.target.classList.contains('nav-mobile-link')) {
     burger.classList.remove('burger--active');
-    menu.classList.remove('nav--active');
-    document.body.style.opacity = '1';
+    menu.classList.remove('nav-mobile--active');
+
   }
 })
 
@@ -127,4 +120,12 @@ toggleTheme.addEventListener('click', function () {
 
   const footer = document.querySelector('.footer')
   footer.classList.toggle('footer-theme')
+
+  const navMobile = document.querySelector('.nav-mobile')
+  navMobile.classList.toggle('nav-mobile-theme')
+  const burgerClose = document.querySelector('.burger .burger--active')
+  burgerClose.classList.toggle('black')
+
+
+
 })
