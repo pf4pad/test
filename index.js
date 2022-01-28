@@ -114,11 +114,17 @@ toggleTheme.addEventListener('click', function () {
   const tab = document.querySelectorAll('.tab-button')
   const btn = document.querySelectorAll('.btn')
   const linkMenu = document.querySelectorAll('.nav-link')
+  const linkLang = document.querySelectorAll('.link-lang')
+
   sectionTitle.forEach(el => el.classList.toggle('light-theme'))
   titleContainer.forEach(el => el.classList.toggle('light-theme'))
   tab.forEach(el => el.classList.toggle('tab-ligth'))
   btn.forEach(el => el.classList.toggle('btn-ligth'))
   linkMenu.forEach(el => el.classList.toggle('link-ligth'))
+  linkLang.forEach(el => el.classList.toggle('link-ligth'))
+  const heroLigth = document.querySelector('.hero-inner')
+  heroLigth.classList.toggle('link-ligth')
+
   const footer = document.querySelector('.footer')
   footer.classList.toggle('footer-theme')
 })
