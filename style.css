@@ -65,18 +65,23 @@ img{
   overflow: hidden;
 }
 
+button{
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.4s;
+  border:none;
+}
+
 .btn {
   width: 220px;
   height: 55px;
   background-color: var(--gold);
-  outline: none;
-  cursor: pointer;
   border: 1px solid var(--gold);
   font-size: var(--fontGl);
   line-height: 40px;
-  font-family: inherit;
-  transition: 0.4s;
-}
+ } 
+  
 
 .btn:hover, .btn:focus {
 color: var(--white);
@@ -140,27 +145,25 @@ section:not(:first-child) {
   gap: 10px;
 }
 
+.toggle-theme {
+  background: transparent;
+  width: 45px;
+  height: 45px;
+  background-image: url('./assets/svg/White-theme.svg');
+  background-size: 45px 45px;
+  background-repeat: no-repeat;
+}
+.toggle-theme:hover{
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+.white-theme{
+  background-image: url('./assets/svg/Dark-theme.svg');
+ }
 
 .link-lang.active{
   color: var(--gold);
 }
-.btn-theme {
-  width: 45px;
-  height: 45px;
-  background: transparent;
-  background-image: url('./assets/svg/White-theme.svg');
-  background-size: contain;
-  background-repeat: no-repeat;  
-  transition: 0.3s;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  
-}
 
-.btn-theme:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
-}
 .burger{
   display: none;
 }
@@ -461,4 +464,19 @@ textarea{
   background-image: url('./assets/svg/pinterest.svg');
 }
 
+.light-theme{
+  color: var(--bg-dark);
+  background-color: var(--white);
+}
+
+.title-container.light-theme{
+  background-image: linear-gradient(to top, #fff 39px, #bdae82 39px, #bdae82 41px, #fff 41px);
+}
+.section-title.light-theme{
+  color: var(--gold);
+   background: #fff;
+}
+.btn.light-theme{
+  background-color: var(--gold);
+}
 

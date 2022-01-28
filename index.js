@@ -102,24 +102,17 @@ function getTranslate(lang) {
 
 // Черная -светлая тема
 
-const block = ['body', '.container', '.skills-container', '.portfolio-container', '.video-container', '.price-container']
+const block = ['body', '.container']
 
-const theme = document.querySelector('.theme')
+const toggleTheme = document.querySelector('.toggle-theme')
 
-theme.addEventListener('click', function () {
+toggleTheme.addEventListener('click', function () {
   block.forEach(el => document.querySelector(el).classList.toggle('light-theme'))
-  theme.classList.toggle('chang-theme')
+  toggleTheme.classList.toggle('white-theme')
   const titleContainer = document.querySelectorAll('.title-container')
   const sectionTitle = document.querySelectorAll('.section-title')
-  // const transparentBtn = document.querySelectorAll('.transparent-btn')
-  // transparentBtn.forEach(el => el.classList.add('light-theme'))
   sectionTitle.forEach(el => el.classList.toggle('light-theme'))
-  titleContainer.forEach(el => el.classList.toggle('titleContainer-light'))
+  titleContainer.forEach(el => el.classList.toggle('light-theme'))
 
-  // if (window.matchMedia("(max-width: 768px)").matches) {
-  //   navList.style.backgroundColor = 'white';
-  // navList.style.color = 'black';
-
-  // } 
 
 })
