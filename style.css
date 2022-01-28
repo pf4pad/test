@@ -371,7 +371,7 @@ section:not(:first-child) {
 
 .section-contacts .container{
   background-image: url('./assets/img/contacts.jpg');
-  background-size: auto 700px;
+  background-size: auto 705px;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -470,13 +470,29 @@ textarea{
 }
 
 .title-container.light-theme{
-  background-image: linear-gradient(to top, #fff 39px, #bdae82 39px, #bdae82 41px, #fff 41px);
-}
-.section-title.light-theme{
-  color: var(--gold);
-   background: #fff;
-}
-.btn.light-theme{
-  background-color: var(--gold);
+  background-image: linear-gradient(to top, rgb(255, 255, 255) 39px, #000 39px, #000000 41px, rgb(255, 255, 255) 41px);
 }
 
+
+.tab-ligth{
+   background: transparent;
+   color: var(--bg-dark);
+}
+.tab-ligth{
+   background: transparent;
+   color: var(--bg-dark);
+}
+
+.tab-ligth:hover{
+  background: var(--gold);
+  color: var(--white);
+}
+
+.link-ligth{
+  color: var(--white);
+}
+
+.footer-theme .container{
+  background-color: var(--bg-dark);
+  color:var(--white);
+}
