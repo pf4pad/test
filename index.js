@@ -19,7 +19,6 @@ menu.addEventListener('click', (event) => {
   if (event.target.classList.contains('nav-mobile-link')) {
     burger.classList.remove('burger--active');
     menu.classList.remove('nav-mobile--active');
-
   }
 })
 
@@ -44,8 +43,6 @@ function changeImage(event) {
 portfolioBtns.addEventListener('click', changeImage)
 
 
-
-
 //  Кэширование изображение
 const seasons = ['winter', 'spring', 'summer', 'autumn'];
 
@@ -58,10 +55,7 @@ seasons.forEach((season) => {
   }
 })
 
-
-
 // Перевод
-
 
 import i18Obj from './translate.js';
 
@@ -91,7 +85,6 @@ function getTranslate(lang) {
   dataI18.forEach(item => item.textContent = i18Obj[lang][item.dataset.i18])
   console.log(dataI18)
 }
-
 
 // Черная -светлая тема
 
@@ -123,9 +116,31 @@ toggleTheme.addEventListener('click', function () {
 
   const navMobile = document.querySelector('.nav-mobile')
   navMobile.classList.toggle('nav-mobile-theme')
-  const burgerClose = document.querySelector('.burger .burger--active')
-  burgerClose.classList.toggle('black')
-
-
-
+  const lineOne = document.querySelector('.line-one')
+  const lineTree = document.querySelector('.line-three')
+  lineOne.classList.toggle('black')
+  lineTree.classList.toggle('black')
 })
+
+
+let lang = 'en'
+let theme = 'light-theme'
+
+function setLocalStorage() {
+  localStorage.setItem('lang', lang);
+  localStorage.setItem('light-theme', theme);
+}
+window.addEventListener('beforeunload', setLocalStorage)
+
+function getLocalStorage() {
+  if (localStorage.getItem('lang')) {
+    const lang = localStorage.getItem('lang');
+    getTranslate(lang);
+  }
+  if (localStorage.getItem('light-theme')) {
+    const theme = localStorage.getItem('light-theme');
+    getTranslate(theme);
+  }
+}
+window.addEventListener('load', getLocalStorage)
+
